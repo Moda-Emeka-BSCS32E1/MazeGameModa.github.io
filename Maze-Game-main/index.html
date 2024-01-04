@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maze</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <a href="#" id="popup-link">About Us</a>
+<div id="popup-window">
+  <div id="aboutUs">About us</div>
+  <div id="Members">Members:
+    <ul>
+      <li>Programmer:Emeka Moda</li>
+      <li>Programmer:Jayford Bongo</li>
+      <li>Game Design:Sherwin Atok</li>
+      <li>Gameplay : JohnTex Bibay</li>
+    </ul>
+  </div>
+  <div id="explain">
+    A basic maze game made using html,css and javascript.
+    The game has 4 levels: Easy , Medium , Hard and Extreme.
+    We have made the structure of each maze different everytime you start a new game.
+  </div>
+  <button id="close-button">Close</button>
+</div>        
+</div>        
+  <div id="page">
+    <div id="Message-Container">
+      <div id="message">
+        <h1>Congratulations!</h1>
+        <p>You are done.</p>
+        <p id="moves"></p>
+        <input id="okBtn" type="button" onclick="toggleVisablity('Message-Container')" value="Cool!" />
+      </div>
+    </div>
+
+    <br>
+    <div id="menu">
+      <div class="custom-select">
+        <select id="diffSelect">
+                  <option value="10">Easy</option>
+                  <option value="15">Medium</option>
+                  <option value="25">Hard</option>
+                  <option value="38">Extreme</option>                                      
+              </select>
+      </div>
+      <input id="startMazeBtn" type="button" onclick="makeMaze()" value="Start" />
+    </div>
+
+    <div id="view">
+      <div id="mazeContainer">
+        <canvas id="mazeCanvas" class="border" height="1100" width="1100"></canvas>
+      </div>
+    </div>
+
+    <p id="instructions">Use arrow keys to move the key to the house!</p>
+
+  </div>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
+  <script>
+    const popupLink = document.getElementById("popup-link");
+    const popupWindow = document.getElementById("popup-window");
+    const closeButton = document.getElementById("close-button");
+    popupLink.addEventListener("click", function(event) {
+    event.preventDefault();
+     popupWindow.style.display = "block";
+    });
+     closeButton.addEventListener("click", function() {
+    popupWindow.style.display = "none";
+  });
+  </script>
+  <script defer src="./script.js"></script>
+</body>
+</html>
